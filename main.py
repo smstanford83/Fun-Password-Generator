@@ -9,9 +9,28 @@ numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 print("Welcome to the PyPassword Generator!")
-nr_letters= int(input("\nHow many letters would you like in your password?\n")) 
-nr_symbols = int(input(f"How many symbols would you like?\n"))
-nr_numbers = int(input(f"How many numbers would you like?\n"))
+
+# these while loops validate user input and retry on error
+while True:
+    try:
+        nr_letters = int(input("\nHow many letters would you like in your password?\n"))
+        break
+    except ValueError:
+        print('Error:  Not a valid choice.  Please try again.\n')
+
+while True:
+    try:
+        nr_symbols = int(input(f"How many symbols would you like?\n"))
+        break
+    except ValueError:
+        print('Error:  Not a valid choice.  Please try again.\n')
+
+while True:
+    try:
+        nr_numbers = int(input(f"How many numbers would you like?\n"))
+        break
+    except ValueError:
+        print('Error:  Not a valid choice.  Please try again.\n')
 
 password = '' # initialize variable
 
