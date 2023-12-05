@@ -15,23 +15,15 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 password = '' # initialize variable
 
-
+# generates user-defined random choice of letters, symbols, and numbers
 for letter in range(1, nr_letters + 1):
-  nr_rand = random.randint(0, len(letters) - 1)
-  char = letters[nr_rand]
-  password = password + char
-  # alternative method
-  # password += random.choice(letters)
+    password += random.choice(letters)
 
 for symbol in range(1, nr_symbols + 1):
-  nr_rand = random.randint(0, len(symbols) - 1)
-  char = symbols[nr_rand]
-  password = password + char
-  
+    password += random.choice(symbols)
+
 for number in range(1, nr_numbers + 1):
-  nr_rand = random.randint(0, len(numbers) - 1)
-  char = numbers[nr_rand]
-  password = password + char
+    password += random.choice(numbers)
 
 pw_list = [] # initialize list variable
 for pw in password: # add each character from password string to a list
